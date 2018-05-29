@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Codelab Kotlin</string>
+    <string name="toast_button">Toast</string>
+    <string name="count_button">Count</string>
+    <string name="random_button">Random</string>
+    <string name="click_a_button_textview">Click a button!</string>
 </resources>
