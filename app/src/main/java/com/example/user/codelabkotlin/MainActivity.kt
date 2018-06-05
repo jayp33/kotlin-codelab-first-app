@@ -16,20 +16,20 @@ class MainActivity : AppCompatActivity() {
 
         Log.d("MainActivity", "App launched successfully")
 
-        toast_button.setOnClickListener { toastMe(it) }
+        toast_button.setOnClickListener { toastMe() }
 
-        count_button.setOnClickListener { countMe(it) }
+        count_button.setOnClickListener { countMe() }
 
-        random_button.setOnClickListener { randomMe(it) }
+        random_button.setOnClickListener { randomMe() }
     }
 
-    private fun toastMe(view: View) {
+    private fun toastMe() {
         // val myToast = Toast.makeText(this, message, duration);
         val myToast = Toast.makeText(this, "Hello Toast!", Toast.LENGTH_SHORT)
         myToast.show()
     }
 
-    private fun countMe(view: View) {
+    private fun countMe() {
         // Get the value of the text view.
         val countString = myTextView.text.toString()
 
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         myTextView.text = count.toString();
     }
 
-    private fun randomMe(view: View) {
+    private fun randomMe() {
         // Create an Intent to start the second activity
         val randomIntent = Intent(this, RandomActivity::class.java)
 
