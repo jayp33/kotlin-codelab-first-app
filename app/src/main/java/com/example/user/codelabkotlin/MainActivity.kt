@@ -44,7 +44,11 @@ class MainActivity : AppCompatActivity() {
     private fun randomMe() {
         // Create an Intent to start the second activity
         val randomIntent = Intent(this, RandomActivity::class.java)
-        randomIntent.putExtra(RandomActivity.TOTAL_COUNT, 42)
+
+        val counterString = myTextView.text.toString()
+        val count = Integer.parseInt(counterString)
+
+        randomIntent.putExtra(RandomActivity.TOTAL_COUNT, count)
 
         // Start the new activity.
         startActivity(randomIntent)
