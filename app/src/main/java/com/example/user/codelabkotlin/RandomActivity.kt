@@ -9,4 +9,8 @@ class RandomActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_random)
     }
+
+    companion object {
+        const val TOTAL_COUNT = "TOTAL_COUNT"
+    }
 }
