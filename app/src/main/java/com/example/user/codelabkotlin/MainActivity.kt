@@ -44,6 +44,7 @@ class MainActivity : AppCompatActivity() {
     private fun randomMe() {
         // Create an Intent to start the second activity
         val randomIntent = Intent(this, RandomActivity::class.java)
+        intent.putExtra(RandomActivity.TOTAL_COUNT, 42)
 
         // Start the new activity.
         startActivity(randomIntent)
