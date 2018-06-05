@@ -1,5 +1,6 @@
 package com.example.user.codelabkotlin
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
@@ -18,6 +19,8 @@ class MainActivity : AppCompatActivity() {
         toast_button.setOnClickListener { toastMe(it) }
 
         count_button.setOnClickListener { countMe(it) }
+
+        random_button.setOnClickListener { randomMe(it) }
     }
 
     private fun toastMe(view: View) {
@@ -36,5 +39,13 @@ class MainActivity : AppCompatActivity() {
 
         // Display the new value in the text view.
         myTextView.text = count.toString();
+    }
+
+    private fun randomMe(view: View) {
+        // Create an Intent to start the second activity
+        val randomIntent = Intent(this, RandomActivity::class.java)
+
+        // Start the new activity.
+        startActivity(randomIntent)
     }
 }
