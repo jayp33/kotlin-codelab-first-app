@@ -3,6 +3,7 @@ package com.example.user.codelabkotlin
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_random.*
+import java.util.*
 
 class RandomActivity : AppCompatActivity() {
 
@@ -12,8 +13,14 @@ class RandomActivity : AppCompatActivity() {
 
         val number = intent.getIntExtra(TOTAL_COUNT, 0)
 
+        val random = Random()
+        var randomInt = 0
+        if (number > 0) {
+            randomInt = random.nextInt(number + 1)
+        }
+
         titleText.text = getString(R.string.top_label, number)
-        numberText.setText(number.toString())
+        numberText.setText(randomInt.toString())
     }
 
     companion object {
