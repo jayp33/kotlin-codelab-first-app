@@ -6,4 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".RandomActivity">
 
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="299dp"
+        android:layout_height="117dp"
+        android:text="This is a random number between 0 and something"
+        android:textSize="30dp"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="25dp" />
+
+    <TextView
+        android:id="@+id/numberText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R"
+        android:textSize="50dp"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="218dp" />
 </android.support.constraint.ConstraintLayout>
