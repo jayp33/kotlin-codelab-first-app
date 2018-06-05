@@ -20,13 +20,13 @@ class MainActivity : AppCompatActivity() {
         count_button.setOnClickListener { countMe(it) }
     }
 
-    fun toastMe(view: View) {
+    private fun toastMe(view: View) {
         // val myToast = Toast.makeText(this, message, duration);
         val myToast = Toast.makeText(this, "Hello Toast!", Toast.LENGTH_SHORT)
         myToast.show()
     }
 
-    fun countMe(view: View) {
+    private fun countMe(view: View) {
         // Get the value of the text view.
         val countString = myTextView.text.toString()
 
