@@ -14,6 +14,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         Log.d("MainActivity", "App launched successfully")
+
+        toast_button.setOnClickListener { toastMe(it) }
+
+        count_button.setOnClickListener { countMe(it) }
     }
 
     fun toastMe(view: View) {
