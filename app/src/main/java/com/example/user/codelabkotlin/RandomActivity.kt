@@ -12,6 +12,7 @@ class RandomActivity : AppCompatActivity() {
 
         val number = intent.getIntExtra(TOTAL_COUNT, 0)
 
+        titleText.text = getString(R.string.top_label, number)
         numberText.setText(number.toString())
     }
 
