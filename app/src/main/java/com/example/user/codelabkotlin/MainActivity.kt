@@ -1,10 +1,10 @@
 package com.example.user.codelabkotlin
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
-import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -51,6 +51,15 @@ class MainActivity : AppCompatActivity() {
         randomIntent.putExtra(RandomActivity.TOTAL_COUNT, count)
 
         // Start the new activity.
-        startActivity(randomIntent)
+        startActivityForResult(randomIntent, 1)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == 1 && resultCode == Activity.RESULT_OK) {
+            val randomNumber = data?.getIntExtra("RANDOM_NUMBER", 0) ?: 0
+            Log.d("MainActivity", "Random number is: ${randomNumber}")
+        }
     }
 }

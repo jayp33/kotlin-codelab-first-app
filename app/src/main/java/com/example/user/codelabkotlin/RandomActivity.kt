@@ -1,7 +1,9 @@
 package com.example.user.codelabkotlin
 
-import android.support.v7.app.AppCompatActivity
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_random.*
 import java.util.*
 
@@ -21,6 +23,9 @@ class RandomActivity : AppCompatActivity() {
 
         titleText.text = getString(R.string.top_label, number)
         numberText.setText(randomInt.toString())
+
+        val resultIntent = Intent().putExtra("RANDOM_NUMBER", randomInt)
+        setResult(Activity.RESULT_OK, resultIntent)
     }
 
     companion object {
